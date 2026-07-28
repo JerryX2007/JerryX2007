@@ -17,3 +17,22 @@ I'm a Computer Science student at the University of Toronto Scarborough primaril
 - 🤖 Exploring machine-learning fundamentals and practical AI-powered applications
 - 💡 Interested in creating reliable software that solves real problems
 - 📍 Based in Toronto, Canada
+---
+
+## Tech Stack
+
+### Languages
+
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=py,c,cpp,js,html,css&perline=6" alt="Languages" />
+  </a>
+</div>
+
+### Frameworks, Databases & Tools
+
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=fastapi,flask,sqlite,git,github,vscode&perline=6" alt="Frameworks, databases, and tools" />
+  </a>
+</div>
