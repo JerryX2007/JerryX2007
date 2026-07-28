@@ -2,22 +2,16 @@
 
 ### <code>jerry@github ~ $ whoami</code>
 
-<table>
-  <tr>
-    <td valign="top">
-      <img src="./jerry-ascii.svg" width="370" alt="Jerry Xing's animated ASCII profile portrait">
-    </td>
-    <td valign="top">
-      <img src="./wordmark.svg" width="490" alt="JRX animated 3D ASCII wordmark">
-    </td>
-  </tr>
-</table>
+<p>
+  <img src="./jerry-portrait-v5.svg" width="370" alt="Jerry Xing's animated ASCII profile portrait">
+  <img src="./jrx-wordmark-v5.svg" width="455" alt="JRX animated 3D ASCII wordmark">
+</p>
 
 <br>
 
 ### <code>jerry@github ~ $ ./contributions.sh</code>
 
-<img src="./contrib-heatmap.svg" width="860" alt="Jerry Xing's animated GitHub contribution graph">
+<img src="./contributions-v5.svg" width="860" alt="Jerry Xing's animated GitHub contribution graph">
 
 <br>
 
@@ -28,8 +22,8 @@ Software Engineering · AI / Machine Learning
 
 <br>
 
-<a href="https://github.com/JerryX2007/networkstatusmonitor">
-  <img src="https://img.shields.io/badge/Featured-Is%20My%20Website%20Down%3F-2563EB?style=for-the-badge&logo=github&logoColor=white" alt="Featured project: Is My Website Down?">
+<a href="https://github.com/JerryX2007/isitdown">
+  <img src="https://img.shields.io/badge/Featured-Is%20It%20Down%3F-2563EB?style=for-the-badge&logo=github&logoColor=white" alt="Featured project: Is It Down?">
 </a>
 <a href="https://github.com/JerryX2007">
   <img src="https://img.shields.io/badge/GitHub-JerryX2007-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub: JerryX2007">
@@ -48,7 +42,7 @@ I'm a Computer Science student at the University of Toronto Scarborough who enjo
 
 ## `> featured build`
 
-### [Is My Website Down? →](https://github.com/JerryX2007/networkstatusmonitor)
+### [Is It Down? →](https://github.com/JerryX2007/isitdown)
 
 A full-stack availability checker that runs fresh website checks, reports response time and status, visualizes community outage reports, and supports anonymous reporting with duplicate-report protection.
 
