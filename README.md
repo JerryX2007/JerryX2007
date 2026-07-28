@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://github.com/JerryX2007/networkstatusmonitor">
-    <img src="https://img.shields.io/badge/Featured%20Build-Is%20My%20Website%20Down%3F-2563EB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Featured project: Is My Website Down?">
+    <img src="https://img.shields.io/badge/Featured%20Build-Is%20My%20Website%20Down%3F-2563EB?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Featured project: Is It Down?">
   </a>
   <img src="https://img.shields.io/badge/Focus-Software%20Engineering-0F172A?style=for-the-badge" alt="Focus: Software Engineering">
   <img src="https://img.shields.io/badge/Exploring-AI%20%2F%20ML-7C3AED?style=for-the-badge" alt="Exploring AI and machine learning">
@@ -23,7 +23,7 @@ I'm a Computer Science student at the University of Toronto Scarborough who like
 
 ## `> featured build`
 
-### [Is My Website Down? →](https://github.com/JerryX2007/networkstatusmonitor)
+### [Is It Down? →](https://github.com/JerryX2007/networkstatusmonitor)
 
 A full-stack availability checker that runs fresh website checks, reports response time and status, provides dedicated result pages, visualizes community outage reports, and supports anonymous reporting with duplicate-report protection.
 
