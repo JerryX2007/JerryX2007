@@ -1,77 +1,44 @@
-#!/usr/bin/env python3
-"""Generate an animated GitHub-streak SVG (squares light up one by one).
-Works standalone; designed to run in a GitHub Action daily to stay live.
-Usage: python generate_streak_svg.py [username] [output.svg]
-"""
-import sys, json, os, datetime, urllib.request
+# Manual upload
 
-USER = sys.argv[1] if len(sys.argv) > 1 else "JerryX2007"
-OUT  = sys.argv[2] if len(sys.argv) > 2 else "contrib-heatmap.svg"
+This version follows the guide's SVG approach. Do not convert any asset to GIF.
 
-def get_data(user):
-    url = f"https://github-contributions-api.jogruber.de/v4/{user}?y=last"
-    try:
-        with urllib.request.urlopen(url, timeout=25) as r:
-            return json.loads(r.read().decode())
-    except Exception as e:
-        raise RuntimeError(f"Could not fetch contribution data for {user}: {e}") from e
+## Upload the profile
 
-data = get_data(USER)
-contribs = data["contributions"]
-total = data["total"]["lastYear"]
+1. Open <https://github.com/JerryX2007/JerryX2007>.
+2. Choose **Add file → Upload files**.
+3. Upload these four files to the repository root:
+   - `README.md`
+   - `jerry-ascii.svg`
+   - `wordmark.svg`
+   - `contrib-heatmap.svg`
+4. Commit the files to the `main` branch.
+5. Hard-refresh your profile page. The portrait prints once and holds, the `whoami Jerry Xing` line types once and holds, the cursor blinks, the JRX wordmark rocks continuously, and the contribution cells reveal in sequence.
 
-# ---- layout ----
-CELL, GAP, RAD, LEFT, TOP = 13, 3, 2.5, 34, 24
-COLORS = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
-FLASH = "#b4ffaa"
-GRAY = "#7d8590"
-MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+GitHub may cache a previous SVG briefly. If an animation has already completed in your tab, reload the page in a new private window to see its opening sequence again.
 
-n = len(contribs)
-NW = (n + 6) // 7
-W = LEFT + NW*(CELL+GAP) + 6
-H = TOP + 7*(CELL+GAP) + 22
+## Keep the contribution graph current
 
-# timing (seconds)
-REVEAL, DUR = 3.6, 0.55
-maxorder = (NW-1) + 6*0.55
+This optional step adds the same kind of daily refresh used by the guide.
 
-rects, labels = [], []
-sd = datetime.date.fromisoformat(contribs[0]["date"])
-last_m = None
-for wk in range(NW):
-    d = sd + datetime.timedelta(days=wk*7)
-    if d.month != last_m:
-        last_m = d.month
-        labels.append(f'<text class="lbl" x="{LEFT+wk*(CELL+GAP)}" y="{TOP-8}">{MONTHS[d.month-1]}</text>')
-for name, r in [("Mon",1),("Wed",3),("Fri",5)]:
-    labels.append(f'<text class="lbl" x="2" y="{TOP+r*(CELL+GAP)+CELL-2}">{name}</text>')
+1. In the repository, choose **Add file → Create new file**.
+2. Enter `.github/workflows/update-contribution-graph.yml` as the filename.
+3. Copy in the matching workflow file from this package and commit it.
+4. Create `scripts/generate_streak_svg.py` the same way and copy in the matching script.
+5. Open the repository's **Actions** tab, select **Update contribution graph**, and choose **Run workflow**.
 
-for i, c in enumerate(contribs):
-    wk, row, lvl = i//7, i%7, c["level"]
-    x = LEFT + wk*(CELL+GAP); y = TOP + row*(CELL+GAP)
-    delay = round((wk + row*0.55)/maxorder * REVEAL, 3)
-    cls = "c g" if lvl >= 1 else "c e"
-    rects.append(
-        f'<rect class="{cls}" x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="{RAD}" '
-        f'fill="{COLORS[lvl]}" style="animation-delay:{delay}s"/>'
-    )
+If the workflow cannot push its update, open **Settings → Actions → General → Workflow permissions**, select **Read and write permissions**, and run it again.
 
-svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-<style>
-  text.lbl {{ fill:{GRAY}; font-size:13px; font-weight:600; }}
-  text.total {{ fill:#e6edf3; font-size:15px; font-weight:700; }}
-  .c {{ transform-box:fill-box; transform-origin:center; opacity:0; animation:pop {DUR}s ease-out both; }}
-  .g {{ animation:pop {DUR}s ease-out both, flash {DUR+0.15}s ease-out both; }}
-  @keyframes pop {{ 0%{{opacity:0;transform:scale(.2)}} 60%{{opacity:1;transform:scale(1.1)}} 100%{{opacity:1;transform:scale(1)}} }}
-  @keyframes flash {{ 0%{{filter:brightness(2.4)}} 45%{{filter:brightness(2.4)}} 100%{{filter:brightness(1)}} }}
-  @media (prefers-reduced-motion: reduce) {{ .c {{ opacity:1 !important; animation:none !important; }} }}
-</style>
-<rect width="{W}" height="{H}" fill="none"/>
-{''.join(labels)}
-{''.join(rects)}
-<text class="total" x="{LEFT}" y="{H-6}">{total:,} contributions in the last year</text>
-</svg>'''
+## Expected files
 
-open(OUT, "w").write(svg)
-print(f"Wrote {OUT}: {n} days, {total:,} contributions, {len(svg)//1024} KB")
+```text
+JerryX2007/
+├── .github/
+│   └── workflows/
+│       └── update-contribution-graph.yml
+├── scripts/
+│   └── generate_streak_svg.py
+├── README.md
+├── contrib-heatmap.svg
+├── jerry-ascii.svg
+└── wordmark.svg
+```
