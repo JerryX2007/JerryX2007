@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Jerry Xing — Software Engineering</title>
+  <desc id="desc">Animated light-mode banner for Jerry Xing, a University of Toronto computer science student focused on software engineering and exploring AI and machine learning.</desc>
+
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FAFC"/>
+      <stop offset="0.52" stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#F5F3FF"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0284C7"/>
+      <stop offset="0.5" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#9333EA"/>
+    </linearGradient>
+    <radialGradient id="glowBlue">
+      <stop offset="0" stop-color="#60A5FA" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#60A5FA" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple">
+      <stop offset="0" stop-color="#C084FC" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#C084FC" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#2563EB" stroke-opacity=".055"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#64748B" flood-opacity=".2"/>
+    </filter>
+    <clipPath id="frame">
+      <rect width="1200" height="360" rx="28"/>
+    </clipPath>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; }
+      .eyebrow { font-size: 15px; font-weight: 700; letter-spacing: 2.4px; fill: #0369A1; }
+      .name { font-size: 60px; font-weight: 800; letter-spacing: -1.5px; fill: #0F172A; }
+      .role { font-size: 22px; font-weight: 650; letter-spacing: .5px; fill: #334155; }
+      .chip { font-size: 12px; font-weight: 750; letter-spacing: 1.1px; fill: #1E293B; }
+      .term { font-size: 14px; fill: #4F46E5; }
+      .termValue { font-size: 15px; font-weight: 700; fill: #0F172A; }
+      .floatOne { animation: floatOne 8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .floatTwo { animation: floatTwo 10s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      .trace { stroke-dasharray: 12 18; animation: trace 14s linear infinite; }
+      .cursor { animation: blink 1.05s steps(1,end) infinite; }
+      .pulse { animation: pulse 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+      @keyframes floatOne { 0%,100% { transform: translate(0,0); } 50% { transform: translate(18px,-10px); } }
+      @keyframes floatTwo { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-12px,15px); } }
+      @keyframes trace { to { stroke-dashoffset: -600; } }
+      @keyframes blink { 0%,48% { opacity: 1; } 49%,100% { opacity: 0; } }
+      @keyframes pulse { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: 1; transform: scale(1.12); } }
+      @media (prefers-reduced-motion: reduce) {
+        .floatOne, .floatTwo, .trace, .cursor, .pulse { animation: none; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#background)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <circle class="floatOne" cx="1085" cy="20" r="260" fill="url(#glowBlue)"/>
+    <circle class="floatTwo" cx="290" cy="395" r="245" fill="url(#glowPurple)"/>
+    <path class="trace" d="M-20 326C170 270 250 335 420 293S706 245 880 281s230 8 350-38" fill="none" stroke="url(#accent)" stroke-width="2" stroke-opacity=".38"/>
+    <rect x="0" y="0" width="1200" height="5" fill="url(#accent)"/>
+
+    <g class="sans">
+      <rect x="60" y="55" width="374" height="32" rx="16" fill="#E0F2FE" stroke="#0284C7" stroke-opacity=".36"/>
+      <circle class="pulse" cx="80" cy="71" r="5" fill="#0284C7"/>
+      <text class="eyebrow" x="96" y="77">CS · UNIVERSITY OF TORONTO</text>
+
+      <text class="name" x="58" y="159">JERRY XING</text>
+      <rect x="59" y="177" width="510" height="3" rx="1.5" fill="url(#accent)"/>
+      <text class="role" x="59" y="218">SOFTWARE ENGINEERING FIRST</text>
+
+      <g transform="translate(59 244)">
+        <rect width="102" height="34" rx="17" fill="#E0F2FE" stroke="#0284C7" stroke-opacity=".32"/>
+        <text class="chip" x="19" y="22">BACKEND</text>
+      </g>
+      <g transform="translate(172 244)">
+        <rect width="116" height="34" rx="17" fill="#E0E7FF" stroke="#4F46E5" stroke-opacity=".32"/>
+        <text class="chip" x="18" y="22">FULL-STACK</text>
+      </g>
+      <g transform="translate(299 244)">
+        <rect width="188" height="34" rx="17" fill="#F3E8FF" stroke="#9333EA" stroke-opacity=".32"/>
+        <text class="chip" x="19" y="22">AI / ML EXPLORATION</text>
+      </g>
+    </g>
+
+    <g filter="url(#shadow)">
+      <rect x="706" y="50" width="432" height="260" rx="20" fill="#FFFFFF" fill-opacity=".92" stroke="#CBD5E1"/>
+      <rect x="706" y="50" width="432" height="42" rx="20" fill="#F8FAFC"/>
+      <path d="M706 91H1138" stroke="#E2E8F0"/>
+      <circle cx="731" cy="71" r="6" fill="#FB7185"/>
+      <circle cx="753" cy="71" r="6" fill="#FBBF24"/>
+      <circle cx="775" cy="71" r="6" fill="#34D399"/>
+      <text class="mono" x="929" y="76" text-anchor="middle" font-size="12" fill="#94A3B8">profile.sh</text>
+
+      <g class="mono">
+        <text class="term" x="735" y="125">$ profile --primary</text>
+        <text class="termValue" x="755" y="151">software engineering</text>
+        <text class="term" x="735" y="184">$ profile --secondary</text>
+        <text class="termValue" x="755" y="210">ai / machine learning</text>
+        <text class="term" x="735" y="243">$ status</text>
+        <text class="termValue" x="755" y="270">building + learning</text>
+        <rect class="cursor" x="931" y="256" width="9" height="18" rx="1" fill="#0284C7"/>
+      </g>
+    </g>
+
+    <g fill="#0284C7">
+      <circle class="pulse" cx="671" cy="122" r="4"/>
+      <circle class="pulse" cx="1158" cy="210" r="3" style="animation-delay:.7s"/>
+      <circle class="pulse" cx="650" cy="286" r="3" style="animation-delay:1.2s"/>
+    </g>
+  </g>
+  <rect x="1" y="1" width="1198" height="358" rx="27" fill="none" stroke="#CBD5E1"/>
+</svg>
+
