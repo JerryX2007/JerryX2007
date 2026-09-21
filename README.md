@@ -9,11 +9,7 @@
   <a href="https://dmoj.ca/user/Jerryxing"><img src="https://img.shields.io/badge/DMOJ-161b22?style=for-the-badge&logo=codeforces&logoColor=white" alt="DMOJ"></a>
 </p>
 
-<p align="center">
-  <img src="assets/portrait.svg" width="37%" alt="ASCII art portrait of Jerry">
-  &nbsp;
-  <img src="assets/volleyball.svg" width="60%" alt="Animated ASCII art of two players rallying a volleyball">
-</p>
+<img src="assets/portrait.svg" align="right" width="44%" alt="ASCII art portrait of Jerry">
 
 ### `$ cat about.md`
 
@@ -23,6 +19,12 @@ I'm a Computer Science student at the **University of Toronto Scarborough** who 
 - Exploring AI/ML foundations
 - Sharpening reliable deploys, testing and API design
 - Reach me at **xingjerry7@gmail.com**
+
+<br clear="right">
+
+<p align="center">
+  <img src="assets/volleyball.svg" width="72%" alt="Animated ASCII art of two players rallying a volleyball">
+</p>
 
 <p align="center">
   <img src="assets/contributions.svg" width="100%" alt="Contribution graph for the last year, fading in from left to right">
