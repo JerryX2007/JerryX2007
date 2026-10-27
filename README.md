@@ -36,7 +36,7 @@ I'm a Computer Science student at the **University of Toronto Scarborough** who 
 | --- | --- | --- |
 | [**veer**](https://github.com/JerryX2007/veer) 🚧 | Volleyball VOD analyzer: tag rallies, auto-detect highlights (big kills, saves, blocks, crowd reactions) and export reels, all processed locally | React · FastAPI · SQLite · OpenCV · NumPy · ffmpeg |
 | [**isitdown**](https://github.com/JerryX2007/isitdown) | Website availability checker combining server-side checks with community outage reports | React · TypeScript · FastAPI · PostgreSQL · GitHub Actions · Vercel |
-| [**study_task_manager**](https://github.com/JerryX2007/study_task_manager) | A fully working full-stack web app, built to learn Flask and SQLite end to end | JavaScript · Flask · SQLite |
+| [**hunch**](https://github.com/JerryX2007/hunch) · [demo](https://hunch-beige.vercel.app) | Flags changes in long-term care residents by comparing new care notes with each resident's usual pattern, quoting the notes and surfacing similar past cases | React · TypeScript · FastAPI · Supabase · Gemini · Vercel |
 
 ### `$ echo $STACK`
 
