@@ -15,8 +15,8 @@
 
 I'm a Computer Science student at the **University of Toronto Scarborough** who likes building useful, understandable software — full-stack products, backend services, API design, databases, testing and deployment.
 
-- Building **[isitdown](https://github.com/JerryX2007/isitdown)**: server-side checks + community outage reports
-- Exploring AI/ML foundations
+- Building **[veer](https://github.com/JerryX2007/veer)**: a volleyball match analyzer that finds rallies and highlights in your own footage, on your own machine
+- Applying computer vision (OpenCV, pose estimation) to real sports video
 - Sharpening reliable deploys, testing and API design
 - Reach me at **xingjerry7@gmail.com**
 
@@ -34,6 +34,7 @@ I'm a Computer Science student at the **University of Toronto Scarborough** who 
 
 | Project | What it is | Built with |
 | --- | --- | --- |
+| [**veer**](https://github.com/JerryX2007/veer) 🚧 | Volleyball VOD analyzer: tag rallies, auto-detect highlights (big kills, saves, blocks, crowd reactions) and export reels, all processed locally | React · FastAPI · SQLite · OpenCV · NumPy · ffmpeg |
 | [**isitdown**](https://github.com/JerryX2007/isitdown) | Website availability checker combining server-side checks with community outage reports | React · TypeScript · FastAPI · PostgreSQL · GitHub Actions · Vercel |
 | [**study_task_manager**](https://github.com/JerryX2007/study_task_manager) | A fully working full-stack web app, built to learn Flask and SQLite end to end | JavaScript · Flask · SQLite |
 
@@ -50,6 +51,9 @@ I'm a Computer Science student at the **University of Toronto Scarborough** who 
   <img src="https://img.shields.io/badge/Flask-161b22?style=flat-square&logo=flask&logoColor=3fb950" alt="Flask">
   <img src="https://img.shields.io/badge/PostgreSQL-161b22?style=flat-square&logo=postgresql&logoColor=3fb950" alt="PostgreSQL">
   <img src="https://img.shields.io/badge/SQLite-161b22?style=flat-square&logo=sqlite&logoColor=3fb950" alt="SQLite">
+  <img src="https://img.shields.io/badge/OpenCV-161b22?style=flat-square&logo=opencv&logoColor=3fb950" alt="OpenCV">
+  <img src="https://img.shields.io/badge/NumPy-161b22?style=flat-square&logo=numpy&logoColor=3fb950" alt="NumPy">
+  <img src="https://img.shields.io/badge/FFmpeg-161b22?style=flat-square&logo=ffmpeg&logoColor=3fb950" alt="FFmpeg">
   <img src="https://img.shields.io/badge/Git-161b22?style=flat-square&logo=git&logoColor=3fb950" alt="Git">
   <img src="https://img.shields.io/badge/GitHub_Actions-161b22?style=flat-square&logo=githubactions&logoColor=3fb950" alt="GitHub Actions">
   <img src="https://img.shields.io/badge/Vite-161b22?style=flat-square&logo=vite&logoColor=3fb950" alt="Vite">
